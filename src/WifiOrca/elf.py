@@ -9,7 +9,7 @@ from TheSilent.web_scanner import *
 
 CYAN = "\033[1;36m"
 
-def elf(save_file):
+def elf("report.txt"):
     start = time.time()
     clear()
     host_list = []
@@ -38,7 +38,7 @@ def elf(save_file):
                 print(CYAN + f"getting banner: {host}:{port}")
                 banner = my_socket.recv(4096)
                 print(CYAN + banner)
-                with open(save_file, "a") as file:
+                with open("report.txt", "a") as file:
                     file.write(str(banner) + "\n")
 
                 my_socket.close()
@@ -55,7 +55,7 @@ def elf(save_file):
         print(CYAN + f"running TheSilent's web scanner against: http://{ip}")
         my_web_scanner = web_scanner(f"http://{ip}")
 
-        with open(save_file, "a") as file:
+        with open("report.txt", "a") as file:
             if my_web_scanner == "This server is secure!":
                 file.write(f"{ip}: This server is secure!\n")
                 print(CYAN + f"{ip}: This server is secure!")
@@ -77,7 +77,7 @@ def elf(save_file):
         print(CYAN + f"running The Silent's web scanner against: https://{ip}")
         my_web_scanner = web_scanner(f"https://{ip}")
 
-        with open(save_file, "a") as file:
+        with open("report.txt", "a") as file:
             if my_web_scanner[0] == "This server is secure!":
                 file.write(f"{ip}: This server is secure!\n")
                 print(CYAN + f"{ip}: This server is secure!")
