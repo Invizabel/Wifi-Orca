@@ -131,7 +131,7 @@ def packet_fox_client():
 
     with open("payloads.txt", "r") as file:
         payloads = file.read()
-        payloads = re.sub("[\s\t\r\n]","",lan)
+        payloads = re.sub("[\s\t\r\n]","",payloads)
 
     clear()
     if platform != "linux":
