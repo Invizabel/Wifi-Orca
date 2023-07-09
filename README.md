@@ -1,3 +1,5 @@
-# The-Silent
-# Python penetration testing, osint, and digital forensics multi tool!
-# In Development
+# Wifi Orca contains free and open source tools similar to hak5!
+# requirements:
+# * nmap
+# * sqlmap
+# * TheSilent

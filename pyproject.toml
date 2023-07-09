@@ -4,11 +4,11 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "WifiOrca"
-version = "0.0.2"
+version = "0.0.4"
 authors = [
   { name="Michael Mueller", email="michael.j.mueller.pro@gmail.com" },
 ]
-description = "Wifi Orca contains free and open source tools similar to hak5! Requires nmap!"
+description = "Wifi Orca contains free and open source tools similar to hak5! Please see github for more info!"
 readme = "README.md"
 license = { file="LICENSE.txt" }
 requires-python = ">=3.9"
