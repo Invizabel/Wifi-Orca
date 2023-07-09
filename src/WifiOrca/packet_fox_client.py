@@ -138,10 +138,10 @@ def packet_fox_client():
     wlan_list = []
     interface_list = socket.if_nameindex()
     for interface in interface_list:
-        if "wlan" in interface[1]:
+        if "br" in interface[1]:
             wlan_list.append(interface)
 
-        if "eth" in interface[1]:
+        if "eth" in interface[1] or "wlan" in interface[1]:
             lan_list.append(interface)
 
     if payloads == "01":
