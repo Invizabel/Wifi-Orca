@@ -5,6 +5,7 @@
 # * linux
 # * monitor mode
 # * nmap (linux package)
+# * root privileges
 # * sqlmap
 # * TheSilent
 # 
@@ -43,3 +44,5 @@
 # 01 | ip only
 # 10 | lan only
 # 11 | both ip and lan
+# 
+# note: all text files must be made using root in order for Wifi Orca to work

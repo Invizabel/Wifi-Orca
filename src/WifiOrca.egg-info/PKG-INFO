@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: WifiOrca
-Version: 0.0.9
+Version: 0.0.10
 Summary: Wifi Orca contains free and open source tools similar to hak5! Please see github for more info!
 Author-email: Michael Mueller <michael.j.mueller.pro@gmail.com>
 Project-URL: Homepage, https://github.com/Invizabel/Wifi-Orca
@@ -18,6 +18,7 @@ Description-Content-Type: text/markdown
 # * linux
 # * monitor mode
 # * nmap (linux package)
+# * root privileges
 # * sqlmap
 # * TheSilent
 # 
@@ -56,3 +57,5 @@ Description-Content-Type: text/markdown
 # 01 | ip only
 # 10 | lan only
 # 11 | both ip and lan
+# 
+# note: all text files must be made using root in order for Wifi Orca to work
