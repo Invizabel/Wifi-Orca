@@ -10,13 +10,13 @@
 # * TheSilent
 # 
 # client usage:
-# import WifiOrca.main
+# python3 -m WifiOrca.main
 # make sure to have the server.txt file present in the same directory as WifiOrca for the packet_fox_client.py script to work
 # make sure to have the mode.txt file present in the same directory as WifiOrca for the packet_fox_client.py script to work
 # make sure to have the ports.txt file present in the same directory as WifiOrca for the packet_fox_client.py script to work
 # make sure to have the payloads.txt file present in the same directory as WifiOrca for the packet_fox_client.py script to work
 # 
-# reverse shell client start at boot:
+# main client start at boot:
 # On linux in a terminal:
 # crontab -e
 # then add the following to the file:
@@ -45,4 +45,8 @@
 # 10 | lan only
 # 11 | both ip and lan
 # 
-# note: all text files must be made using root in order for Wifi Orca to work
+# venv:
+# $ sudo python3 -m venv WifiOrca
+# $ source WifiOrca/bin/activate
+# $ sudo pip3 install WifiOrca
+
