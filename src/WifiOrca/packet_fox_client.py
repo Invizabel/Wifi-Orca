@@ -129,12 +129,23 @@ def packet_fox_client():
         server = file.read()
         server = re.sub("[\s\t\r\n]","",server)
 
+    with open("payloads.txt", "r") as file:
+        payloads = file.read()
+        payloads = re.sub("[\s\t\r\n]","",lan)
+
     clear()
     if platform != "linux":
         print("Unsupported platform! Linux is required for this tool!")
         sys.exit()
 
-    ip_thread = threading.Thread(target=ip_sniff,args=[server]).start()
-    lan_thread = threading.Thread(target=lan_sniff,args=[server]).start()
+    if payloads == "01":
+        ip_thread = threading.Thread(target=ip_sniff,args=[server]).start()
+
+    if payloads == "10":
+        lan_thread = threading.Thread(target=lan_sniff,args=[server]).start()
+
+    if payloads == "11":
+        ip_thread = threading.Thread(target=ip_sniff,args=[server]).start()
+        lan_thread = threading.Thread(target=lan_sniff,args=[server]).start()
 
 packet_fox_client()
