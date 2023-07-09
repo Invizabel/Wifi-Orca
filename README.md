@@ -26,10 +26,10 @@
 # import WifiOrca.packet_fox_server
 # 
 # packet fox modes:
-# 0 | off | ip_sniff
-# 1 | internal to internal | ip_sniff
-# 2 | internal to external but not internal to internal | ip_sniff
-# 3 | all | ip_sniff
+# 0 | off | lan_sniff
+# 1 | internal to internal | lan_sniff
+# 2 | internal to external but not internal to internal | lan_sniff
+# 3 | all | lan_sniff
 # 
 # packet fox ports:
 # ports must be separated by new lines
@@ -41,12 +41,18 @@
 # 1194,1725,9050,19132,19133- potential policy violation
 # 
 # packet fox payloads:
-# 01 | ip only
-# 10 | lan only
-# 11 | both ip and lan
+# 01 | lan only
+# 10 | wlan only
+# 11 | both lan and wlan
 # 
 # venv:
 # $ sudo python3 -m venv WifiOrca
 # $ source WifiOrca/bin/activate
 # $ sudo pip3 install WifiOrca
-
+# 
+# Notes:
+# openwrt currently doesn't support venv
+# WifiOrca will automatically detect interfaces and assign them accordingly
+# 
+# todo
+# add interface manual override
