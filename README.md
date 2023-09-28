@@ -1,4 +1,4 @@
-# Wifi Orca contains free and open source tools similar to hak5!
+# Wifi Orca contains free and open source tools!
 # 
 # requirements:
 # * iw (linux package)
